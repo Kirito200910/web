@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form id="redirectForm" onsubmit="redirectToPage(); return false;">
+            <h1>Acertijo</h1>
+            <div class="input-box">
+                <input type="text" id="textInput" placeholder="Codigo de entrada" required>
+                <button type="submit" class="btn">Prueba</button>
+            </div>
+        </form>
+    </div>
+  
+    <script>
+        function redirectToPage() {
+            const textInput = document.getElementById('textInput').value;
+            if (textInput === 'Huevos') {
+                window.location.href = 'https://youtube.com';
+            } else {
+                alert('Que te has equivocado tontito. Va, dale otra');
+            }
+        }
+    </script>
+</body>
+</html>
